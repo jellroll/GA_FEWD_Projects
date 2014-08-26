@@ -1,0 +1,41 @@
+body {
+	font-family: "Droid Serif", Garamond, sans-serif;
+	line-height: 1.25;
+	max-width: 600px;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	color: #37aadf;
+}
+a:hover {
+	text-decoration: underline;
+}
+hr {
+	border: 0;
+	border-bottom: 1px dashed #ccc;
+}
+.info_box_container {
+	width: 600px;
+	height: 100px;
+}
+.info_author {
+	width: 200px;
+	padding: 4px 4px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+.info_box {
+	width: 100px;
+	padding: 4px 4px;
+	float: left;
+	margin: 0 10px 0 0;
+	background: #d2514b;
+	color: #fff;
+	text-align: center;
+	line-height: 1;
+	border-radius: 4px;
+}
+.ingredients_measure {
+	font-style: bold;
+}
