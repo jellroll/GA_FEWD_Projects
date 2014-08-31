@@ -23,6 +23,14 @@ td {
 	background: rgba(196, 236, 252, 1);
 	text-align: center;
 }
+#container {
+	max-width: 750px;
+}
+#main {
+	float: left;
+	max-width: 472px;
+	margin-right: 10px;
+}
 #header {
 	font-size: 20px;
 	height: 80px;
@@ -63,18 +71,18 @@ td {
 /* Music Panel */
 #music-panel {
 	float: left;
-	width: 320px;
+	width: 268px;
 }
 #music-panel div {
 	border-bottom: 1px solid rgba(102, 163, 198, 1);
 	margin-bottom: 20px;
-	font-size: 14px;
+	font-size: 12px;
 }
 #music-panel img {
 	width: 50px;
 	float: right;
 	margin-right: 10px;
 }
-.album-title {
+.album-artist {
 	font-weight: bold;
 }
