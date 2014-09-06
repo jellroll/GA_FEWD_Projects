@@ -1,0 +1,102 @@
+body {
+	max-width: 686px;
+	margin: 0 50px 0 0;
+	padding-left: 48px;
+	border-left: 6px solid rgb(221,221,221);
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	color: rgb(68,68,68);
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 2em;
+	font-weight: normal;
+}
+
+h3 {
+	margin-top: 0;
+	margin-bottom: 17px;
+	font-size: 1.4em;
+	font-weight: normal;
+}
+
+hr {
+	clear: both;
+	background-color: rgb(221,221,221);
+	border: 1px solid rgb(221,221,221);
+}
+
+#header {
+	padding-top: 60px;
+}
+
+#header-navigation a {
+	margin-right: 0.8em;
+	padding-bottom: 0.2em;
+	border-bottom: 2px solid rgb(238,238,238);
+	font-size: 1.2em;
+	color: rgb(223,223,223);
+	text-decoration: none;
+}
+
+#footer {
+	padding-bottom: 60px;
+}
+
+#footer-navigation a { 
+	color: rgb(243,0,0);
+	text-decoration: none;
+}
+
+#title {
+	margin-top: 0;
+	margin-bottom: 0px;
+	color: rgb(243,0,0);
+	font-size: 2.9em;
+	font-weight: normal;
+}
+
+.date {
+	margin-bottom: 0;
+}
+
+.hero-image {
+	width: 100%;
+}
+
+.faded {
+	color: rgb(221,221,221);
+}
+
+.post-content {
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.post-continue {
+	float: right;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.post-continue a {
+	color: rgb(243,0,0);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.dropcap {
+	float: left;
+	margin-right: 10px;
+	margin-left: -6px;
+	line-height: 0.8;
+	font-size: 6em;
+}
+
+.copyright {
+	margin-top: 28px;
+	color: rgb(187,187,187);
+}
