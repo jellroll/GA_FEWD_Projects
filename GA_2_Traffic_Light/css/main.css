@@ -1,0 +1,67 @@
+body {
+	max-width: 600px;
+}
+
+button {
+	float: left;
+}
+
+#container {
+	width: 400px;
+}
+
+#lightbox {
+	width: 100px;
+	height: 230px;
+	border: 1px solid #ccc;
+}
+
+.light {
+	height: 60px;
+	width: 60px;
+	background-color: #000;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	cursor: pointer;
+	margin: 10px;
+	transition: background-color 1s ease 0s;
+	}
+
+.light:hover {	
+  background-color: green;
+  opacity: .9;
+}
+
+
+.go {
+	background-color: green;
+}
+
+.stop {
+	background-color: red;
+
+}
+
+.caution {
+	background-color: yellow;
+}
+
+
+/*
+
+.shape-shifter {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  transition: width 2s ease 0s; 
+  cursor: pointer;
+}
+
+.shape-shifter:hover {
+  background-color: green;
+  opacity: .5;
+  width: 500px;
+}
+when the width changes, change this way; can use background-color
+
+*/
