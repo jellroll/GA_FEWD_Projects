@@ -1,30 +1,40 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
 	max-width: 600px;
+	font-family: avenir, helvetica, sans-serif;
+	background: rgba(102,163,198,0.8);
 }
 
 button {
 	float: left;
-}
-
-#container {
-	width: 400px;
+	position: inline;
+	width: 80px;
+	height: 40px;
+	border-radius: 4px;
+	background: rgb(255,255,255);
+	font-size: 0.8em;
 }
 
 #lightbox {
-	width: 100px;
-	height: 230px;
+	width: 80px;
+	height: 220px;
+	background: rgb(255,255,255);
 	border: 1px solid #ccc;
 }
 
 .light {
-	height: 60px;
 	width: 60px;
-	background-color: #000;
-	border-radius: 50%;
+	height: 60px;
+	background-color: rgba(132,132,132,1);
+	border-radius: 30px;
 	border: 2px solid #ccc;
 	cursor: pointer;
 	margin: 10px;
-	transition: background-color 1s ease 0s;
 	}
 
 .light:hover {	
@@ -33,35 +43,13 @@ button {
 }
 
 
-.go {
-	background-color: green;
-}
 
-.stop {
-	background-color: red;
-
-}
-
-.caution {
-	background-color: yellow;
-}
-
-
-/*
-
-.shape-shifter {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  transition: width 2s ease 0s; 
-  cursor: pointer;
-}
-
-.shape-shifter:hover {
-  background-color: green;
-  opacity: .5;
-  width: 500px;
-}
-when the width changes, change this way; can use background-color
-
-*/
+/* button {
+	float: right;
+	clear: both;
+	width: 80px;
+	height: 40px;
+	border-radius: 4px;
+	background: rgb(255,255,255);
+	font-size: 0.8em;
+} */
