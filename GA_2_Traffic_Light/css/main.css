@@ -7,49 +7,56 @@
 body {
 	max-width: 600px;
 	font-family: avenir, helvetica, sans-serif;
-	background: rgba(102,163,198,0.8);
+	background: rgba(55,53,59,0.8);
+	margin: 20px;
 }
 
 button {
-	float: left;
-	position: inline;
-	width: 80px;
-	height: 40px;
-	border-radius: 4px;
+	width: 120px;
+	height: 60px;
+	margin: 10px 0 2px 0;
+	border-radius: 6px;
 	background: rgb(255,255,255);
-	font-size: 0.8em;
+	font-size: 1.1em;
+	cursor: pointer;
 }
 
-#lightbox {
+#light-container {
+	position: absolute;
 	width: 80px;
 	height: 220px;
 	background: rgb(255,255,255);
-	border: 1px solid #ccc;
+	border: 1px solid #rgba(204,204,204,1);
+}
+
+#button-container {
+	float: left;
+	position: relative;
+	margin-left: 120px;
+	width: 80px;
+	height: 220px;
 }
 
 .light {
 	width: 60px;
 	height: 60px;
-	background-color: rgba(132,132,132,1);
+	background: rgba(132,132,132,1);
 	border-radius: 30px;
 	border: 2px solid #ccc;
-	cursor: pointer;
 	margin: 10px;
+	padding: 0;
+	transition: background-color 1s ease 0s;
 	}
 
-.light:hover {	
-  background-color: green;
-  opacity: .9;
+#light-stop {
+	background: rgba(254,24,43,1);
 }
 
+#light-caution {
+	background: rgba(0,0,0,1);
+}
 
+#light-go {
+	background: rgba(0,0,0,1);
+}
 
-/* button {
-	float: right;
-	clear: both;
-	width: 80px;
-	height: 40px;
-	border-radius: 4px;
-	background: rgb(255,255,255);
-	font-size: 0.8em;
-} */

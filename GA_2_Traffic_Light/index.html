@@ -4,21 +4,21 @@
 	<meta charset="UTF-8">
 	<title>Traffic Light</title>
 	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	<script src="js/main.js" type="text/javascript"></script>
 </head>
 
 <body>
-	<!--<div id="container">-->
-		<div id="lightbox">
-			<div class="light"></div>
-			<div class="light"></div>
-			<div class="light"></div>
-		</div>
+	<div id="light-container">
+		<div id="light-stop" class="light"></div>
+		<div id="light-caution" class="light"></div>
+		<div id="light-go" class="light"></div>
+	</div>
 
-		<button>Go</button>
-		<button>Stop</button>
-		<button>Caution</button>
-	
-	<!--</div>-->
+	<div id="button-container">
+		<button id="button-stop" onclick="lightStop()">Stop</button>
+		<button id="button-caution" onclick="lightCaution()">Caution</button>
+		<button id="button-go" onclick="lightGo()">Go</button>
+	</div>
 </body>
 
 </html>
