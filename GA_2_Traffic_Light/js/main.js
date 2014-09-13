@@ -1,17 +1,36 @@
+function directions() {
+	document.getElementById('directions').innerHTML = 'Click a button to control the traffic light.';
+}
+
 function lightStop() {
-		document.getElementById('light-stop').style.background = 'rgba(254,24,43,1)';
-		document.getElementById('light-caution').style.background = 'rgba(0,0,0,1)';
-		document.getElementById('light-go').style.background = 'rgba(0,0,0,1)';
-	}
+	lightsOff();
+	buttonsOn();
+	document.getElementById('light-stop').style.background = 'rgb(225,86,86';
+	document.getElementById('button-stop').disabled = true;
+}
 
 function lightCaution() {
-	document.getElementById('light-stop').style.background = 'rgba(0,0,0,1)';
-	document.getElementById('light-caution').style.background = 'rgba(255,224,59,1)';
-	document.getElementById('light-go').style.background = 'rgba(0,0,0,1)';
+	lightsOff();
+	buttonsOn();
+	document.getElementById('light-caution').style.background = 'rgb(236,244,12)';
+	document.getElementById('button-caution').disabled = true;
 }
 
 function lightGo() {
-	document.getElementById('light-stop').style.background = 'rgba(0,0,0,1)';
-	document.getElementById('light-caution').style.background = 'rgba(0,0,0,1)';
-	document.getElementById('light-go').style.background = 'rgba(71,220,199,1)';
+	lightsOff();
+	buttonsOn();
+	document.getElementById('light-go').style.background = 'rgb(99,197,73)';
+	document.getElementById('button-go').disabled = true;
+}
+
+function lightsOff() {
+	document.getElementById('light-stop').style.background = 'rgb(0,0,0)';
+	document.getElementById('light-caution').style.background = 'rgb(0,0,0)';
+	document.getElementById('light-go').style.background = 'rgb(0,0,0)';
+}
+
+function buttonsOn() {
+	document.getElementById('button-stop').disabled = false;
+	document.getElementById('button-caution').disabled = false;
+	document.getElementById('button-go').disabled = false;
 }

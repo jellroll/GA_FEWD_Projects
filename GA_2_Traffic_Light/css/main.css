@@ -7,7 +7,8 @@
 body {
 	max-width: 600px;
 	font-family: avenir, helvetica, sans-serif;
-	background: rgba(55,53,59,0.8);
+	color: rgb(255,255,255);
+	background: rgb(85,145,185);
 	margin: 20px;
 }
 
@@ -16,6 +17,7 @@ button {
 	height: 60px;
 	margin: 10px 0 2px 0;
 	border-radius: 6px;
+	border-bottom: 4px solid rgb(56,195,196);
 	background: rgb(255,255,255);
 	font-size: 1.1em;
 	cursor: pointer;
@@ -26,7 +28,8 @@ button {
 	width: 80px;
 	height: 220px;
 	background: rgb(255,255,255);
-	border: 1px solid #rgba(204,204,204,1);
+	border: 1px solid rgb(204,204,204);
+	border-radius: 4px;
 }
 
 #button-container {
@@ -40,23 +43,33 @@ button {
 .light {
 	width: 60px;
 	height: 60px;
-	background: rgba(132,132,132,1);
+	background: rgba(0,0,0,1);
 	border-radius: 30px;
 	border: 2px solid #ccc;
 	margin: 10px;
 	padding: 0;
 	transition: background-color 1s ease 0s;
-	}
-
-#light-stop {
-	background: rgba(254,24,43,1);
 }
 
-#light-caution {
-	background: rgba(0,0,0,1);
+.car {
+	position: relative;
+	top: 300px;	
+	width: 180px;
+	height: 70px;
+	background-color: rgb(188,94,72);
+	-webkit-animation-name: carMove;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-play-state: running;
 }
 
-#light-go {
-	background: rgba(0,0,0,1);
+@-webkit-keyframes carMove {
+	0% {left: 0px; right: 100px;}
+	25% {left: 100px; right: 200px;}
+	50% {left: 200px; right: 300px;}
+	75% {left: 300px; right: 400px;}
+	100% {left: 400px; right: 500px;}
 }
-
