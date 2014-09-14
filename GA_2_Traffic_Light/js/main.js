@@ -7,6 +7,8 @@ function lightStop() {
 	buttonsOn();
 	document.getElementById('light-stop').style.background = 'rgb(225,86,86';
 	document.getElementById('button-stop').disabled = true;
+	document.getElementById('car').style.WebkitAnimationDuration = '2s';
+	document.getElementById('car').style.WebkitAnimationPlayState = 'paused';
 }
 
 function lightCaution() {
@@ -14,6 +16,8 @@ function lightCaution() {
 	buttonsOn();
 	document.getElementById('light-caution').style.background = 'rgb(236,244,12)';
 	document.getElementById('button-caution').disabled = true;
+	document.getElementById('car').style.WebkitAnimationDuration = '30s';
+	document.getElementById('car').style.WebkitAnimationPlayState = 'running';
 }
 
 function lightGo() {
@@ -21,6 +25,8 @@ function lightGo() {
 	buttonsOn();
 	document.getElementById('light-go').style.background = 'rgb(99,197,73)';
 	document.getElementById('button-go').disabled = true;
+	document.getElementById('car').style.WebkitAnimationDuration = '2s';
+	document.getElementById('car').style.WebkitAnimationPlayState = 'running';
 }
 
 function lightsOff() {

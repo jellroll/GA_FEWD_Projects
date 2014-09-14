@@ -51,10 +51,10 @@ button {
 	transition: background-color 1s ease 0s;
 }
 
-.car {
+#car {
 	position: relative;
 	top: 300px;	
-	width: 180px;
+	width: 150px;
 	height: 70px;
 	background-color: rgb(188,94,72);
 	-webkit-animation-name: carMove;
@@ -62,7 +62,6 @@ button {
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-delay: 0s;
 	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-direction: alternate;
 	-webkit-animation-play-state: running;
 }
 
@@ -73,3 +72,5 @@ button {
 	75% {left: 300px; right: 400px;}
 	100% {left: 400px; right: 500px;}
 }
+
+
