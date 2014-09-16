@@ -44,7 +44,7 @@ function lightGo() {
 	document.getElementById('car').style.WebkitAnimationPlayState = 'running';
 }
 
-function lightsOff() {
+function lightsOff() { 
 	document.getElementById('light-stop').style.background = 'rgb(0,0,0)';
 	document.getElementById('light-caution').style.background = 'rgb(0,0,0)';
 	document.getElementById('light-go').style.background = 'rgb(0,0,0)';
