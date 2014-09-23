@@ -1,3 +1,5 @@
+var car = document.getElementById('car');
+
 function directions() {
 	document.getElementById('directions').innerHTML = 'Click a button to control the traffic light and car.';
 }
@@ -51,6 +53,8 @@ function lightsOff() {
 }
 
 function buttonsOn() {
+	//use an array on class button????
+	//var buttons = document.getElementsByClass('buttons')
 	document.getElementById('button-stop').disabled = false;
 	document.getElementById('button-caution').disabled = false;
 	document.getElementById('button-go').disabled = false;
