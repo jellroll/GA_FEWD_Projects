@@ -17,25 +17,34 @@ function changeImage(whichNum) {
 	currentCaption = whichNum;
 }
 
+// Change the image and caption attributes
+
+function setImage() {
+	var img = document.getElementById('main-image');
+	img.setAttribute('src', images[currentImage]);
+}
+
+function setCaption() {
+	var caption = document.getElementById('main-caption');
+	caption.innerHTML = captions[currentCaption];
+}
+
 // Change to next image
 function nextImage() {
 	currentImage++;
 	if (currentImage===images.length) {
 		currentImage = 0;
 	}
-	
-	var img = document.getElementById('main-image');
-	img.setAttribute('src', images[currentImage]);
+
+	setImage();
 
 	currentCaption++;
 	if (currentCaption===captions.length) {
 		currentCaption = 0;
 	}
 
-	var caption = document.getElementById('main-caption');
-	caption.innerHTML = captions[currentCaption];
+	setCaption();
 }
-
 
 // Change to previous image
 function prevImage() {
@@ -44,14 +53,12 @@ function prevImage() {
 		currentImage = images.length-1;
 	}
 
-	var img = document.getElementById('main-image');
-	img.setAttribute('src', images[currentImage]);
+	setImage();
 
 	currentCaption = currentCaption-1;
 	if (currentCaption===0) {
 		currentCaption = captions.length-1;
 	}
 
-	var caption = document.getElementById('main-caption');
-	caption.innerHTML = captions[currentCaption];
+	setCaption();
 }
