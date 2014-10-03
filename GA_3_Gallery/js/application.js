@@ -49,14 +49,14 @@ function nextImage() {
 // Change to previous image
 function prevImage() {
 	currentImage = currentImage-1;
-	if (currentImage===0) {
+	if (currentImage == -1) {
 		currentImage = images.length-1;
 	}
 
 	setImage();
 
 	currentCaption = currentCaption-1;
-	if (currentCaption===0) {
+	if (currentCaption == -1) {
 		currentCaption = captions.length-1;
 	}
 
