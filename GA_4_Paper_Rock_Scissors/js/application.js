@@ -5,9 +5,7 @@ var computerChoice
 function reset() {
 	playerChoice = "";
 	computerChoice = "";
-	outcome = "";
-
-	
+	outcome = "";	
 }
 
 // Ask player choice

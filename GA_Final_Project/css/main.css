@@ -16,7 +16,7 @@ h1 {
 
 footer {
 	position: fixed;
-	bottom: 0;
+	bottom: 4px;
 	width: 100%;
 	text-align: center;
 	font-size: 14px;
@@ -28,21 +28,26 @@ footer a {
 	color: rgb(255,255,255);
 }
 
+button {
+	display: block;
+	margin: 0 auto;
+	background: rgb(146,180,76);
+	cursor: pointer;
+	border: none;
+	border-radius: 2px;
+	width: 120px;
+	height: 40px;
+	font-size: 22px;
+	color: rgb(255,255,255);
+	font-variant: small-caps;
+}
+
 #card-container {
 	margin: 0 auto;
 	border: 1px solid rgb(204,204,204);
 	border-radius: 8px;
 	max-width: 450px;
-	min-height: 320px;
 	background: rgb(255,255,255);
-}
-
-#card-content {
-	margin-top: 20px;
-	font-size: 28px;
-	line-height: 40px;
-	padding-left: 24px;
-	padding-right: 24px;
 }
 
 #controls {
@@ -51,13 +56,45 @@ footer a {
 	margin-right: auto;
 	width: 225px;
 	display: block;
-	bottom: -100px;
+	bottom: 20px;
 }
 
 #controls .icon-heart {
 	margin-left: 100px;
 }
 
-.highlight {
+.card-content {
+	min-height: 200px;
+	margin-top: 20px;
+	font-size: 28px;
+	padding-left: 24px;
+	padding-right: 24px;
+	margin-bottom: 20px;
+}
+
+.highlight-error {
 	background: rgb(235,219,85);
+}
+
+.highlight-correction {
+	background: rgb(88,187,78);
+}
+
+#report {
+	margin: 0 auto;
+	border-radius: 4px;
+	max-width: 450px;
+	background: rgb(255,255,255);
+	min-height: 300px;
+	font-size: 30px;
+}
+
+#score {
+	width: 100px;
+	height: 90px;
+	border-radius: 50%;
+	font-size: 30px;
+	background: rgb(226,181,63);
+	padding: 24px;
+	display: inline-block;
 }

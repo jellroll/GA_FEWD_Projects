@@ -27,7 +27,7 @@
 	content: "\e600";
 	font-size: 60px;
 	color: rgb(164,84,23);
-	cursor: pointer;
+	speak: none;
 }
 
 .icon-fire:before {
@@ -35,4 +35,31 @@
 	font-size: 60px;
 	color: rgb(164,84,23);
 	cursor: pointer;
+	speak: none;
+}
+
+.icon-cancel-circle:before {
+	content: "\e602";
+	font-size: 60px;
+	speak: none;
+}
+
+.icon-checkmark-circle:before {
+	content: "\e603";
+	font-size: 60px;
+	speak: none;
+}
+
+.icon-forward:before {
+	content: "\e604";
+	font-size: 60px;
+	color: rgb(164,84,23);
+	speak: none;
+}
+
+.icon-rewind:before {
+	content: "\e605";
+	font-size: 60px;
+	color: rgb(164,84,23);
+	speak: none;
 }
