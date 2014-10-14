@@ -85,4 +85,6 @@ function reset() {
 
 	document.getElementById("player1-hero").src = "img/hero-mystery.png";
 	document.getElementById("player2-hero").src = "img/hero-mystery.png";
+
+	document.getElementById("winner").innerHTML = "&#8668; choose your hero";
 }
