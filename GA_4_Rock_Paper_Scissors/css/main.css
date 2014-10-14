@@ -1,0 +1,89 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+	font-family: Avenir, helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#player1-container {
+	width: 50%;
+	float: left;
+	background-color: rgb(85,145,185);
+}
+
+#player2-container{
+	width: 50%;
+	float: right;
+	background-color: rgb(162,191,185);
+	text-align: right;
+}
+
+#option-container {
+	min-width: 20%;
+	display: inline-block;
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	margin-left: 38%;
+	margin-right: 38%;
+	padding: 10px;
+	background: rgba(0,0,0,.6);
+	border-radius: 2px;	
+}
+
+#option-container img {
+	max-height: 50px;
+}
+
+.player-container {
+	height: 100vh;
+}
+
+.player-info {
+	height: 48px;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 1.2em;
+	line-height: 48px;
+	margin: 10px 10px 30px 10px;
+}
+
+.player1-avatar {
+	float: left;
+	margin-right: 0.5em;
+}
+
+.player2-avatar {
+	float: right;
+	margin-left: 0.5em;
+}
+
+.player-name {
+	color: rgb(0,0,0);
+}
+
+.player-choice {
+	display: inline;
+	margin: 30px 25% 30px 25%;
+}
+
+.hero-image {
+	max-width: 50%;
+}
+
+.score {
+	color: rgb(255,255,255);
+	margin-left: 10px;
+}
+
+.option {
+	display: inline;
+}
+
+.clearfix {
+	clear: both;
+}
