@@ -5,9 +5,7 @@
 	<title>Justice League RPS</title>
 	<script src="js/jquery.js" rel="javascript" type="text/javascript"></script>
 	<script src="js/application.js" rel="javascript" type="text/javascript"></script>
-	<!--<script src="js/modernizr.custom.js"></script>-->
 	<link href="css/main.css" rel="stylesheet" type="text/css" />
-	<!--<link href="css/component.css" rel="stylesheet" type="text/css" />-->
 </head>
 
 <body>
@@ -20,14 +18,13 @@
 
 		<div class="player-choice">
 			<img id="player1-hero" class="hero-image" src="img/hero-mystery.png" alt="Mystery" />
-			<!--<button class="md-trigger" data-modal="modal-4">Modal</button>-->
 		</div>
 	</div>
 
 	<div id="player2-container" class="player-container">
 		<div class="player-info">
 			<img class="player2-avatar" src="img/avatar-robot.png" alt="Player 2" />
-			<span class="player-name">robot</span>
+			<span class="player-name">roboto</span>
 			<span id="player2-score" class="score">0</span>
 		</div>
 
@@ -39,9 +36,14 @@
 	<div class="clearfix"></div>
 
 	<div id="option-container">
+		<div id="game-logo"><img src="img/logo-justice-league.png" alt="Justice League"/></div>
 		<div class="option" onclick="changeHero(0)"><img src="img/logo-superman.png" alt="Superman" title="Choose Superman" /></div>
 		<div class="option" onclick="changeHero(1)"><img src="img/logo-batman.png" alt="Batman" title="Choose Batman" /></div>
 		<div class="option" onclick="changeHero(2)"><img src="img/logo-wonder-woman.png" alt="Wonder Woman" title="Choose Wonder Woman" /></div>
+		<div class="option" onclick="changeHero(3)"><img src="img/logo-aquaman.png" alt="Aquaman" title="Choose Aquaman" /></div>
+		<div id="option-flash" class="option" onclick="changeHero(4)"><img src="img/logo-flash.png" alt="The Flash" title="Choose The Flash" /></div>
+		<button onclick="reset()">start over</button>
+		<div id="winner">&#8668; choose your hero</div>
 	</div>
 
 </body>

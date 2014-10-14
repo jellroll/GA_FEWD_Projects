@@ -1,14 +1,19 @@
 // Global arrays
-images = ["img/hero-superman.png", "img/hero-batman.png", "img/hero-wonder-woman.png"];
-heroes = ["superman", "batman", "wonderwoman"];
+images = ["img/hero-superman.png", "img/hero-batman.png", "img/hero-wonder-woman.png", "img/hero-aquaman.png", "img/hero-flash.png"];
+heroes = ["superman", "batman", "wonderwoman", "aquaman", "flash"];
+
 
 // Global variables
 var currentImage = 0;
-var computerChoice = "batman";
 var userChoice = "Mystery";
+var userPoints = 0;
+var computerChoice = "Mystery";
+var computerPoints = 0;
 
-// Possible winning outcomes for the user
-var userWins = ["supermanwonderwoman", "batmansuperman", "wonderwomanbatman"];
+
+// Possible winning outcomes for the user (Player 1)
+var userWins = ["supermanwonderwoman", "supermanaquaman", "batmansuperman", "batmanflash", "wonderwomanbatman", "wonderwomanaquaman", "aquamanflash", "aquamanbatman", "flashwonderwoman", "flashsuperman"];
+
 
 // User makes a choice
 function changeHero(whichNum) {
@@ -18,53 +23,66 @@ function changeHero(whichNum) {
 	currentImage = whichNum;
 
 	var userChoice = heroes[whichNum];
-	
-	console.log("User Choice = " + userChoice);
 
 
-// Computer makes a random choice
-var computerChoice = Math.random();
+	// Computer makes a random choice
+	var computerChoice = Math.random();
 
-if(computerChoice < 0.34) {
-	computerChoice = "superman";
-	document.getElementById("player2-hero").src = "img/hero-superman.png";
+	if(computerChoice < 0.2) {
+		computerChoice = "superman";
+		document.getElementById("player2-hero").src = "img/hero-superman.png";
+	} else if(computerChoice <= 0.4) {
+		computerChoice = "batman";
+		document.getElementById("player2-hero").src = "img/hero-batman.png";
+	} else if(computerChoice <= 0.6) {
+		computerChoice = "wonderwoman";
+		document.getElementById("player2-hero").src = "img/hero-wonder-woman.png";
+	} else if(computerChoice <= 0.8) {
+		computerChoice = "aquaman";
+		document.getElementById("player2-hero").src = "img/hero-aquaman.png";
+	} else {
+		computerChoice = "flash";
+		document.getElementById("player2-hero").src = "img/hero-flash.png";
+	}
 
-} else if(computerChoice <= 0.67) {
-	computerChoice = "batman";
-	document.getElementById("player2-hero").src = "img/hero-batman.png";
 
-} else {
-	computerChoice = "wonderwoman";
-	document.getElementById("player2-hero").src = "img/hero-wonder-woman.png";
-}
-
-console.log("Computer Choice = " + computerChoice);
-
-}
-
-
-// Compare the two choices to determine a winner
-/*function evaluate() {
-
-	var msg = "Computer Wins!";
+	// Compare the two choices to determine a winner
+	var message = "Roboto wins!";
 
 	if(userChoice == computerChoice) {
-		// winner="tie";
-		msg = "There's a tie!" // Do something
+		message = "It's a tie!";
 	} else {
 
-		var outCome = userChoice + computerChoice;
-		var msg = "Computer Wins!"
+		var outcome = userChoice + computerChoice;
+		var message = "Roboto wins!"
+		computerPoints = computerPoints + 1;
+		document.getElementById("player2-score").innerHTML = computerPoints;
 
 		$.each(userWins, function(index, value) {
-			if(outCome == value) {
-				// winner = "User";
-				msg = "You win!"
+			if(outcome == value) {
+				message = "You win!"
+				userPoints = userPoints + 1;
+				document.getElementById("player1-score").innerHTML = userPoints;
 		}
 	});
 		}
-	return msg;
+
+	document.getElementById("winner").innerHTML = (message);
+	return message;
 }
 
-var outcomeMsg = evaluate();*/
-//alert(outcomeMsg);
+// Reset the game
+function reset() {
+
+	currentImage = 0;
+	userChoice = "Mystery";
+	userPoints = 0;
+	computerChoice = "Mystery";
+	computerPoints = 0;
+
+	document.getElementById("player1-score").innerHTML = 0;
+	document.getElementById("player2-score").innerHTML = 0;
+
+	document.getElementById("player1-hero").src = "img/hero-mystery.png";
+	document.getElementById("player2-hero").src = "img/hero-mystery.png";
+}
