@@ -1,6 +1,6 @@
 // Global arrays
-images = ["img/hero-superman.png", "img/hero-batman.png", "img/hero-wonder-woman.png", "img/hero-aquaman.png", "img/hero-flash.png"];
-heroes = ["superman", "batman", "wonderwoman", "aquaman", "flash"];
+var images = ["img/hero-superman.png", "img/hero-batman.png", "img/hero-wonder-woman.png", "img/hero-aquaman.png", "img/hero-flash.png"];
+var heroes = ["superman", "batman", "wonderwoman", "aquaman", "flash"];
 
 
 // Global variables
@@ -9,6 +9,7 @@ var userChoice = "Mystery";
 var userPoints = 0;
 var computerChoice = "Mystery";
 var computerPoints = 0;
+var img = document.getElementById('player1-hero');
 
 
 // Possible winning outcomes for the user (Player 1)
@@ -17,12 +18,13 @@ var userWins = ["supermanwonderwoman", "supermanaquaman", "batmansuperman", "bat
 
 // User makes a choice
 function changeHero(whichNum) {
-	var img = document.getElementById('player1-hero');
+	setUserHero(whichNum);
+
 	img.setAttribute('src', images[whichNum]);
 
 	currentImage = whichNum;
 
-	var userChoice = heroes[whichNum];
+	
 
 
 	// Computer makes a random choice
@@ -70,6 +72,11 @@ function changeHero(whichNum) {
 	document.getElementById("winner").innerHTML = (message);
 	return message;
 }
+
+function setUserHero(hero){
+	userChoice = heroes[hero];
+}
+
 
 // Reset the game
 function reset() {
