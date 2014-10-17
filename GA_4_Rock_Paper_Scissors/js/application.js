@@ -51,16 +51,18 @@ function changeHero(whichNum) {
 
 	if(userChoice == computerChoice) {
 		message = "It's a tie!";
+
 	} else {
 
 		var outcome = userChoice + computerChoice;
-		var message = "Roboto wins!"
+		var message = "Roboto wins!";
+		
 		computerPoints = computerPoints + 1;
 		document.getElementById("player2-score").innerHTML = computerPoints;
 
 		$.each(userWins, function(index, value) {
 			if(outcome == value) {
-				message = "You win!"
+				message = "You win!";
 				userPoints = userPoints + 1;
 				document.getElementById("player1-score").innerHTML = userPoints;
 		}
@@ -70,11 +72,6 @@ function changeHero(whichNum) {
 	document.getElementById("winner").innerHTML = (message);
 	return message;
 }
-
-function setUserHero(hero){
-	userChoice = heroes[hero];
-}
-
 
 // Reset the game
 function reset() {
