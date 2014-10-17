@@ -9,7 +9,6 @@ var userChoice = "Mystery";
 var userPoints = 0;
 var computerChoice = "Mystery";
 var computerPoints = 0;
-var img = document.getElementById('player1-hero');
 
 
 // Possible winning outcomes for the user (Player 1)
@@ -18,13 +17,12 @@ var userWins = ["supermanwonderwoman", "supermanaquaman", "batmansuperman", "bat
 
 // User makes a choice
 function changeHero(whichNum) {
-	setUserHero(whichNum);
-
+	var img = document.getElementById('player1-hero');
 	img.setAttribute('src', images[whichNum]);
 
 	currentImage = whichNum;
 
-	
+	var userChoice = heroes[whichNum];
 
 
 	// Computer makes a random choice
