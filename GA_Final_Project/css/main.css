@@ -25,18 +25,21 @@ input {
 }
 
 button {
+	width: 140px;
+	height: 40px;
 	display: block;
 	margin: 10px auto 0 auto;
 	background: rgb(146,180,76);
 	cursor: pointer;
 	border: none;
 	border-radius: 2px;
-	width: 140px;
-	height: 40px;
 	font-size: 22px;
 	color: rgb(255,255,255);
 	font-variant: small-caps;
+}
 
+ol {
+	margin-bottom: 30px;
 }
 
 footer {
@@ -53,21 +56,41 @@ footer a {
 	color: rgb(255,255,255);
 }
 
+#intro {
+	max-width: 450px;
+	min-height: 300px;
+	margin: 0 auto;
+	border-radius: 8px;
+	background: rgb(255,255,255);
+	padding: 2px 0 0 14px;
+}
+
+#intro img {
+	width: 24px;
+	margin-top: 10px;
+	margin-right: 6px;
+	vertical-align: text-bottom;
+}
+
 #card {
 	max-width: 450px;
 	margin: 0 auto;
-	border: 1px solid rgb(204,204,204);
 	border-radius: 8px;
 	background: rgb(255,255,255);
+	display: none;
 }
 
 #card-content {
 	min-height: 200px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	font-size: 1.6em;
 	padding-left: 24px;
 	padding-right: 24px;
-	margin-bottom: 20px;
+}
+
+#card-content p {
+	display: inline-block;
 }
 
 #controls-item {
@@ -134,7 +157,6 @@ footer a {
 	margin-right: 10px;
 }
 
-
 #report {
 	margin: 0 auto;
 	border-radius: 4px;
@@ -149,8 +171,7 @@ footer a {
 	max-height: 50%;
 	text-align: center;
 	font-size: 5em;
-	background: rgb(226,181,63);
-	
+	background: rgb(226,181,63);	
 }
 
 .highlight {

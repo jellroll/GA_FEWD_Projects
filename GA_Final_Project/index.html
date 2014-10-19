@@ -14,19 +14,33 @@
 <body>
 	<h1>utter butter</h1>
 
+	<div id="intro">
+		<h3>How to play:</h3>
+		<ol>
+			<li>Read the word or sentence.</li>
+			<li>Is there a mistake?</li>
+			<li>Click or tap.
+			<br />
+			Mistake &#8674; <img src="img/intro-heart-broken.png" alt="Mistake" />
+			<br />
+			No mistake &#8674; <img src="img/intro-heart.png" alt="No mistake" /></li>
+		</ol>
+		<button onclick="startGame();">start</button>
+	</div>
+
 	<div id="card">
 		<div id="card-content">
-			<p>I'll <span class="highlight">definately</span> give you a call on Monday afternoon.</p>
+			<p id="item"></p>
 		</div>
 
 		<div id="controls-item">
-			<span aria-hidden="true" data-icon="&#e601;" class="icon-fire wobble-top" alt="Nope"></span>
-			<span aria-hidden="true" data-icon="&#e600;" class="icon-heart pulse" alt="Yep"></span>
+			<span onclick="evaluateResponse();" aria-hidden="true" data-icon="&#e608;" class="icon-heart-broken wobble-top" alt="Mistake"></span>
+			<span onclick="evaluateResponse();" aria-hidden="true" data-icon="&#e600;" class="icon-heart pulse" alt="No mistake"></span>
 		</div>
 	</div>
 
 	<footer>
-		<a href="index.html">item</a> | <a href="fix.html">fix item</a> | <a href="response_correct.html">correct response</a> | <a href="response_incorrect.html">incorrect response</a> | <a href="results.html">results</a> | 
+		<a href="index.html">intro</a> | <a href="fix.html">fix item</a> | <a href="response_correct.html">correct response</a> | <a href="response_incorrect.html">incorrect response</a> | <a href="results.html">results</a> | 
 		&#169; <a href="http://www.5deadly.com" target="_blank">5deadly</a>
 	</footer>
 </body>

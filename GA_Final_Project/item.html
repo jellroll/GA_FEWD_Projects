@@ -8,29 +8,25 @@
 		<link href="http://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet" type="text/css">
 		<link href="css/main.css" rel="stylesheet" type="text/css" />
 		<link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css" />
-		<title>fix</title>
+		<title>item</title>
 	</head>
 
-<body>
+<body onload="setItem();">
 	<h1>utter butter</h1>
 
 	<div id="card">
 		<div id="card-content">
-			<p id="misspell">definately</p>
-
-			<input type="text" name="correction" autofocus />
-			
-			<p id="hint">Fix the spelling.</p>
-
+			<p id="item">I'll <span class="highlight">definately</span> give you a call on Monday afternoon.</p>
 		</div>
 
-		<div id="controls-feedback">
-			<span aria-hidden="true" data-icon="&#e605;" class="icon-arrow-right wobble-horizontal" alt="Next"></span>
+		<div id="controls-item">
+			<span onclick="evaluateResponse();" aria-hidden="true" data-icon="&#e600;" class="icon-heart pulse" alt="No mistake"></span>
+			<span onclick="evaluateResponse();" aria-hidden="true" data-icon="&#e601;" class="icon-fire wobble-top" alt="Mistake"></span>
 		</div>
 	</div>
 
 	<footer>
-		<a href="index.html">intro</a> | <a href="item.html">item</a> | <a href="fix.html">fix item</a> | <a href="response_correct.html">correct response</a> | <a href="response_incorrect.html">incorrect response</a> | <a href="results.html">results</a> | 
+		<a href="index.html">item</a> | <a href="fix.html">fix item</a> | <a href="response_correct.html">correct response</a> | <a href="response_incorrect.html">incorrect response</a> | <a href="results.html">results</a> | 
 		&#169; <a href="http://www.5deadly.com" target="_blank">5deadly</a>
 	</footer>
 </body>

@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../icomoon.eot?uz42cx');
-	src:url('../icomoon.eot?#iefixuz42cx') format('embedded-opentype'),
-		url('../icomoon.woff?uz42cx') format('woff'),
-		url('../icomoon.ttf?uz42cx') format('truetype'),
-		url('../icomoon.svg?uz42cx#icomoon') format('svg');
+	src:url('../icomoon.eot?-mbknat');
+	src:url('../icomoon.eot?#iefix-mbknat') format('embedded-opentype'),
+		url('../icomoon.woff?-mbknat') format('woff'),
+		url('../icomoon.ttf?-mbknat') format('truetype'),
+		url('../icomoon.svg?-mbknat#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -32,6 +32,13 @@
 	speak: none;
 }
 
+.icon-heart-broken:before {
+	content: "\e608";
+	font-size: 60px;
+	color: rgb(172,47,47);
+	cursor: pointer;
+	speak: none;
+}
 .icon-fire:before {
 	content: "\e601";
 	font-size: 60px;
