@@ -35,10 +35,11 @@
 .icon-heart-broken:before {
 	content: "\e608";
 	font-size: 60px;
-	color: rgb(172,47,47);
+	color: rgb(181,17,28);
 	cursor: pointer;
 	speak: none;
 }
+
 .icon-fire:before {
 	content: "\e601";
 	font-size: 60px;

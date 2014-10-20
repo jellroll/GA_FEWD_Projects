@@ -14,6 +14,7 @@
 <body>
 	<h1>utter butter</h1>
 
+	<!-- Introduction -->
 	<div id="intro">
 		<h3>How to play:</h3>
 		<ol>
@@ -28,19 +29,37 @@
 		<button onclick="startGame();">start</button>
 	</div>
 
-	<div id="card">
+	<!-- Item View -->
+	<div id="card-item">
 		<div id="card-content">
 			<p id="item"></p>
 		</div>
 
 		<div id="controls-item">
-			<span onclick="evaluateResponse();" aria-hidden="true" data-icon="&#e608;" class="icon-heart-broken wobble-top" alt="Mistake"></span>
-			<span onclick="evaluateResponse();" aria-hidden="true" data-icon="&#e600;" class="icon-heart pulse" alt="No mistake"></span>
+			<span onclick="evaluateResponse(false);" aria-hidden="true" data-icon="&#e608;" class="icon-heart-broken wobble-top" alt="Mistake"></span>
+			<span onclick="evaluateResponse(true);" aria-hidden="true" data-icon="&#e600;" class="icon-heart pulse" alt="No mistake"></span>
 		</div>
 	</div>
 
+	<!-- Fix Item View -->
+	<div id="card-fix">
+		<div id="card-content">
+			<p id="prompt"></p>
+			<form autocomplete="off" action="#">
+				<input id="userFixResponse" name="userFixResponse" type="text" spellcheck="false" autofocus />
+				<input type="button" value="submit" onclick="evaluateFixResponse();" />
+			</form>
+			<p id="hint"></p>
+		</div>
+
+		<div id="controls-feedback">
+			<span aria-hidden="true" data-icon="&#e605;" class="icon-arrow-right wobble-horizontal" alt="Next"></span>
+		</div>
+	</div>
+
+
 	<footer>
-		<a href="index.html">intro</a> | <a href="fix.html">fix item</a> | <a href="response_correct.html">correct response</a> | <a href="response_incorrect.html">incorrect response</a> | <a href="results.html">results</a> | 
+		<a href="response_correct.html">correct response</a> | <a href="response_incorrect.html">incorrect response</a> | <a href="results.html">results</a> | 
 		&#169; <a href="http://www.5deadly.com" target="_blank">5deadly</a>
 	</footer>
 </body>
