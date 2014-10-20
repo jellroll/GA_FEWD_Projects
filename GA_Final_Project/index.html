@@ -8,7 +8,7 @@
 		<link href="http://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet" type="text/css">
 		<link href="css/main.css" rel="stylesheet" type="text/css" />
 		<link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css" />
-		<title>item</title>
+		<title>utter butter game</title>
 	</head>
 
 <body>
@@ -45,11 +45,25 @@
 	<div id="card-fix">
 		<div id="card-content">
 			<p id="prompt"></p>
-			<form autocomplete="off" action="#">
+			<form autocomplete="off">
 				<input id="userFixResponse" name="userFixResponse" type="text" spellcheck="false" autofocus />
-				<input type="button" value="submit" onclick="evaluateFixResponse();" />
 			</form>
 			<p id="hint"></p>
+		</div>
+
+		<div id="controls-feedback">
+			<span onclick="evaluateFixResponse();" aria-hidden="true" data-icon="&#e605;" class="icon-arrow-right wobble-horizontal" alt="Next"></span>
+		</div>
+	</div>
+
+	<!-- Feedback View -->
+	<div id="card-feedback">
+		<div id="feedback-evaluation"></div>
+
+		<div id="card-content">
+			<p id="correct"></p>
+			<p id="feedback-message"></p>
+			<img id="feedback-image" />
 		</div>
 
 		<div id="controls-feedback">
@@ -57,10 +71,17 @@
 		</div>
 	</div>
 
+	<!-- Results View -->
+	<div id="report">
+		<div id="score">
+			<span aria-hidden="true" data-icon="&#e607;" class="icon-neutral" alt="Hm"></span> 60
+		</div>
+		
+		<button onclick="reset()">play again</button>
+	</div>
 
-	<footer>
-		<a href="response_correct.html">correct response</a> | <a href="response_incorrect.html">incorrect response</a> | <a href="results.html">results</a> | 
-		&#169; <a href="http://www.5deadly.com" target="_blank">5deadly</a>
+	<footer> 
+		fun crafted by &#169; <a href="http://www.5deadly.com" target="_blank">5deadly</a>
 	</footer>
 </body>
 </html>

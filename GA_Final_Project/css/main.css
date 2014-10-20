@@ -87,6 +87,14 @@ footer a {
 	display: none;
 }
 
+#card-feedback {
+	max-width: 450px;
+	margin: 0 auto;
+	border-radius: 8px;
+	background: rgb(255,255,255);
+	display: none;
+}
+
 #card-content {
 	min-height: 200px;
 	margin-top: 20px;
@@ -122,20 +130,11 @@ footer a {
 	text-align: right;
 }
 
-#message-correct {
+#feedback-evaluation {
+	width: 100%;
+	display: inline-block;
 	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 60px;
-	display: block;
-}
-
-#message-incorrect {
-	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 60px;
-	display: block;
+	text-align: center;
 }
 
 #prompt {
@@ -155,14 +154,10 @@ footer a {
 	text-align: center;
 }
 
-#hint-image {
+#feedback-image {
 	max-width: 40%;
 	margin-left: 30%;
 	margin-right: 30%;
-}
-
-#hint .icon-bulb {
-	margin-right: 10px;
 }
 
 #report {
@@ -172,6 +167,7 @@ footer a {
 	background: rgb(255,255,255);
 	min-height: 280px;
 	font-size: 30px;
+	display: none;
 }
 
 #score {
