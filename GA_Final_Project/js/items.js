@@ -6,7 +6,7 @@ var item0 = {
 	"prompt" : "definately",
 	"correct" : "definitely",
 	"hint" : "Fix the spelling.",
-	"feedbackCorrectMessage" : "You are de<span class=\"highlight\">fin</span>itely correct!",
+	"feedbackCorrectMessage" : "Hooray! You are de<span class=\"highlight\">fin</span>itely correct!",
 	"feedbackIncorrectMessage" : "That's de<span class=\"highlight\">fin</span>itely a fixable problem.",
 	"feedbackImage" : "img/hint-fish.png"
 }
@@ -15,28 +15,41 @@ var item1 = {
 	"stem" : "How <span class=\"highlight\">ironic</span>. I can't find a knife, but I found 10,000 spoons in this drawer.",
 	"answer" : false,
 	"fix" : false,
-	"feedbackCorrectMessage" : "You are de<span class=\"highlight\">fin</span>itely correct!",
-	"feedbackIncorrectMessage" : "That's de<span class=\"highlight\">fin</span>itely a fixable problem.",
+	"feedbackCorrectMessage" : "Irony: correct.",
+	"feedbackIncorrectMessage" : "Irony: incorrect.",
 	"feedbackImage" : "img/hint-fish.png"
 }
 
 var item2 = {
 	"stem" : "<span class=\"highlight\">It's</span> getting hot in here",
 	"answer" : true,
-	"fix" : true,
-	"prompt" : "<span class=\"highlight\">It's</span> getting hot in here"
+	"fix" : false,
+	"prompt" : "<span class=\"highlight\">It's</span> getting hot in here",
+	"feedbackCorrectMessage" : "Apostrophes: correct.",
+	"feedbackIncorrectMessage" : "Apostrophes: incorrect.",
+	"feedbackImage" : "img/hint-fish.png"
 }
 
 var item3 = {
 	"stem" : "I don't want to <span class=\"highlight\">loose</span> my spare change.",
 	"answer" : false,
 	"fix" : true,
-	"prompt" : "I don't want to <span class=\"highlight\">loose</span> my spare change."
+	"prompt" : "I don't want to <span class=\"highlight\">loose</span> my spare change.",
+	"correct" : "lose",
+	"hint" : "Is this the correct word?",
+	"feedbackCorrectMessage" : "Wrong word: correct.",
+	"feedbackIncorrectMessage" : "Wrong word: incorrect.",
+	"feedbackImage" : "img/hint-fish.png"
 }
 
 var item4 = {
 	"stem" : "Sam ordered a sandwich, chips and soda.",
 	"answer" : false,
 	"fix" : true,
-	"prompt" : "Sam ordered a sandwich, chips and soda."
+	"prompt" : "Sam ordered a sandwich, chips and soda.",
+	"correct" : "Sam ordered a sandwich, chips<span class=\"highlight\">,</span> and soda.",
+	"hint" : "Is there a comma missing?",
+	"feedbackCorrectMessage" : "Oxford comma: correct.",
+	"feedbackIncorrectMessage" : "Oxford comma: incorrect.",
+	"feedbackImage" : "img/hint-fish.png"
 }
