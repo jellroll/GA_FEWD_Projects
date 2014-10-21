@@ -1,45 +1,3 @@
-//Each game item and its attributes
-var item0 = {
-	"stem" : "I'll <span class=\"highlight\">definately</span> give you a call on Monday afternoon.",
-	"answer" : false,
-	"fix" : true,
-	"prompt" : "definately",
-	"correct" : "definitely",
-	"hint" : "Fix the spelling.",
-	"feedbackCorrectMessage" : "You are de<span class=\"highlight\">fin</span>itely correct!",
-	"feedbackIncorrectMessage" : "That's de<span class=\"highlight\">fin</span>itely a fixable problem.",
-	"feedbackImage" : "img/hint-fish.png"
-}
-
-var item1 = {
-	"stem" : "How ironic",
-	"answer" : false,
-	"fix" : false,
-	"feedback" : "Ironic means bla"
-}
-
-var item2 = {
-	"stem" : "<span class=\"highlight\">It's</span> getting hot in here",
-	"answer" : true,
-	"fix" : true,
-	"prompt" : "<span class=\"highlight\">It's</span> getting hot in here"
-}
-
-var item3 = {
-	"stem" : "I don't want to <span class=\"highlight\">loose</span> my spare change.",
-	"answer" : false,
-	"fix" : true,
-	"prompt" : "I don't want to <span class=\"highlight\">loose</span> my spare change."
-}
-
-var item4 = {
-	"stem" : "Sam ordered a sandwich, chips and soda.",
-	"answer" : false,
-	"fix" : true,
-	"prompt" : "Sam ordered a sandwich, chips and soda."
-}
-
-
 //Global variables
 var items = [item0, item1, item2, item3, item4];
 var currentItem = items[0];
@@ -75,7 +33,31 @@ function evaluateResponse(response) {
 		document.getElementById("card-fix").style.display = "block";
 
 	} else {
-		console.log("There's no fix it. Show response.");
+
+		document.getElementById("card-item").style.display = "none";
+		document.getElementById("card-feedback").style.display = "block";
+
+		if(response == currentItem.answer) {
+			var feedbackEvaluation = document.getElementById("feedback-evaluation");
+			feedbackEvaluation.innerHTML = feedbackCorrect;
+
+			var feedback = document.getElementById("feedback-message");
+			feedback.innerHTML = currentItem.feedbackCorrectMessage;
+
+			var feedbackImage = document.getElementById("feedback-image");
+			feedbackImage.setAttribute('src', currentItem.feedbackImage);
+
+		} else {
+			var feedbackEvaluation = document.getElementById("feedback-evaluation");
+			feedbackEvaluation.innerHTML = feedbackIncorrect;
+
+			var feedback = document.getElementById("feedback-message");
+			feedback.innerHTML = currentItem.feedbackIncorrectMessage;
+
+			var feedbackImage = document.getElementById("feedback-image");
+			feedbackImage.setAttribute('src', currentItem.feedbackImage);
+		}
+		console.log(currentItem);
 	}
 }
 
