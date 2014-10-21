@@ -33,7 +33,14 @@ function displayNextItem() {
 	document.getElementById("card-feedback").style.display = "none";
 	document.getElementById("card-item").style.display = "block";
 
-	displayItem();
+	if(nextItem === items.length) {
+		document.getElementById("card-item").style.display = "none";
+		document.getElementById("card-feedback").style.display = "none";
+		document.getElementById("report").style.display = "block";
+		} else {
+			displayItem();
+	}
+
 	console.log(currentItem);
 	console.log(items.indexOf(currentItem));
 
@@ -68,7 +75,7 @@ function displayFeedbackIncorrect() {
 
 // Evaluate no mistake / yes mistake response
 function evaluateResponse(response) {
-	if(currentItem.fix == true) {
+	if((currentItem.fix == true) && (response == false) && (currentItem.answer == false)) {
 		var prompt = document.getElementById("prompt");
 		prompt.innerHTML = currentItem.prompt;
 
@@ -121,6 +128,9 @@ function displayResults() {
 
 
 // Reset game
-function reset() {
-
+function resetGame() {
+	currentItem = items[0];
+	document.getElementById("report").style.display = "none";
+	document.getElementById("card-item").style.display = "block";
+	displayItem();
 }

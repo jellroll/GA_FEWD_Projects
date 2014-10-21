@@ -15,16 +15,17 @@ var item1 = {
 	"stem" : "How <span class=\"highlight\">ironic</span>. I can't find a knife, but I found 10,000 spoons in this drawer.",
 	"answer" : false,
 	"fix" : false,
+	"correct" : "Ironic",
 	"feedbackCorrectMessage" : "Irony: correct.",
-	"feedbackIncorrectMessage" : "Irony: incorrect.",
+	"feedbackIncorrectMessage" : "Something is ironic when it's <b>deliberately opposite</b> to what you would expect.",
 	"feedbackImage" : "img/hint-fish.png"
 }
 
 var item2 = {
-	"stem" : "<span class=\"highlight\">It's</span> getting hot in here",
+	"stem" : "<span class=\"highlight\">It's</span> getting hot in here.",
 	"answer" : true,
 	"fix" : false,
-	"prompt" : "<span class=\"highlight\">It's</span> getting hot in here",
+	"prompt" : "<span class=\"highlight\">It's</span> getting hot in here.",
 	"feedbackCorrectMessage" : "Apostrophes: correct.",
 	"feedbackIncorrectMessage" : "Apostrophes: incorrect.",
 	"feedbackImage" : "img/hint-fish.png"
@@ -36,7 +37,7 @@ var item3 = {
 	"fix" : true,
 	"prompt" : "I don't want to <span class=\"highlight\">loose</span> my spare change.",
 	"correct" : "lose",
-	"hint" : "Is this the correct word?",
+	"hint" : "Enter the correct word.",
 	"feedbackCorrectMessage" : "Wrong word: correct.",
 	"feedbackIncorrectMessage" : "Wrong word: incorrect.",
 	"feedbackImage" : "img/hint-fish.png"
@@ -47,7 +48,7 @@ var item4 = {
 	"answer" : false,
 	"fix" : true,
 	"prompt" : "Sam ordered a sandwich, chips and soda.",
-	"correct" : "Sam ordered a sandwich, chips<span class=\"highlight\">,</span> and soda.",
+	"correct" : "Sam ordered a sandwich, chips, and soda.",
 	"hint" : "Is there a comma missing?",
 	"feedbackCorrectMessage" : "Oxford comma: correct.",
 	"feedbackIncorrectMessage" : "Oxford comma: incorrect.",
