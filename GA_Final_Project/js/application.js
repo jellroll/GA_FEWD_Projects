@@ -2,10 +2,16 @@
 var items = [item0, item1, item2, item3, item4];
 var currentItem = items[0];
 var nextItem = 0;
-var userPoints = 0;
+var score = 0;
 
 var feedbackCorrect = "<span aria-hidden=\"true\" data-icon=\"&#e603;\" class=\"icon-checkmark-circle\" title=\"Correct\"></span>";
 var feedbackIncorrect = "<span aria-hidden=\"true\" data-icon=\"&#e602;\" class=\"icon-cancel-circle\" title=\"Incorrect\"></span>";
+
+var resultRange1 = "<span aria-hidden=\"true\" data-icon=\"&#e601;\" class=\"icon-confused\" alt=\"Level 1\"></span>";
+var resultRange2 = "<span aria-hidden=\"true\" data-icon=\"&#e607;\" class=\"icon-neutral\" alt=\"Level 2\"></span>";
+var resultRange3 = "<span aria-hidden=\"true\" data-icon=\"&#e60a;\" class=\"icon-smiley\" alt=\"Level 3\"></span>";
+var resultRange4 = "<span aria-hidden=\"true\" data-icon=\"&#e609;\" class=\"icon-happy\" alt=\"Level 4\"></span>";
+
 
 
 //Start the game
@@ -38,6 +44,7 @@ function displayNextItem() {
 		document.getElementById("card-item").style.display = "none";
 		document.getElementById("card-feedback").style.display = "none";
 		document.getElementById("report").style.display = "block";
+		displayResults();
 		} else {
 			displayItem();
 	}
@@ -100,6 +107,7 @@ function evaluateResponse(response) {
 
 		if(response == currentItem.answer) {
 			displayFeedbackCorrect();
+			tallyScore();
 		} else {
 			displayFeedbackIncorrect();
 		}
@@ -116,6 +124,7 @@ function evaluateFixResponse() {
 
 	if(userFixResponse == currentItem.correct) {
 		displayFeedbackCorrect();
+		tallyScore();
 	} else {
 		displayFeedbackIncorrect();
 	}
@@ -124,19 +133,34 @@ function evaluateFixResponse() {
 
 // Tally score
 function tallyScore() {
-
+	score = score + 20;
+	console.log("User total score is now: " + score);
 }
 
 
 // Display results
 function displayResults() {
+	document.getElementById("score").innerHTML = score;
 
+	// Display score range icon
+	var resultEvaluation = document.getElementById("result-evaluation");
+
+	if(score < 49) {
+		resultEvaluation.innerHTML = resultRange1;
+	} else if(score <= 69) {
+		resultEvaluation.innerHTML = resultRange2;
+	} else if(score <= 89) {
+		resultEvaluation.innerHTML = resultRange3;
+	} else {
+		resultEvaluation.innerHTML = resultRange4;
+	}
 }
 
 
 // Reset the game
 function resetGame() {
 	currentItem = items[0];
+	score = 0;
 
 	document.getElementById("report").style.display = "none";
 	document.getElementById("card-item").style.display = "block";
