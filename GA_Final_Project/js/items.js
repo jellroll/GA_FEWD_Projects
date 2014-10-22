@@ -16,9 +16,9 @@ var item1 = {
 	"answer" : false,
 	"fix" : false,
 	"correct" : "Ironic",
-	"feedbackCorrectMessage" : "Irony: correct.",
-	"feedbackIncorrectMessage" : "Something is ironic when it's <b>deliberately opposite</b> to what you would expect.",
-	"feedbackImage" : "img/hint-fish.png"
+	"feedbackCorrectMessage" : "Yes. Something is <span class=\"highlight\">ironic</span> when it's deliberately <b>opposite</b> to what you would expect.",
+	"feedbackIncorrectMessage" : "Something is <span class=\"highlight\">ironic</span> when it's deliberately <b>opposite</b> to what you would expect.",
+	"feedbackImage" : "img/hint-iron.png"
 }
 
 var item2 = {
@@ -26,8 +26,8 @@ var item2 = {
 	"answer" : true,
 	"fix" : false,
 	"prompt" : "<span class=\"highlight\">It's</span> getting hot in here.",
-	"feedbackCorrectMessage" : "Apostrophes: correct.",
-	"feedbackIncorrectMessage" : "Apostrophes: incorrect.",
+	"feedbackCorrectMessage" : "Use the apostrophe in <span class=\"highlight\">it's</span> to shorten \"it is\".",
+	"feedbackIncorrectMessage" : "Actually, use the apostrophe in <span class=\"highlight\">it's</span> to mean \"it is\".",
 	"feedbackImage" : "img/hint-fish.png"
 }
 

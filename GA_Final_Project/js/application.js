@@ -2,6 +2,7 @@
 var items = [item0, item1, item2, item3, item4];
 var currentItem = items[0];
 var nextItem = 0;
+var userPoints = 0;
 
 var feedbackCorrect = "<span aria-hidden=\"true\" data-icon=\"&#e603;\" class=\"icon-checkmark-circle\" title=\"Correct\"></span>";
 var feedbackIncorrect = "<span aria-hidden=\"true\" data-icon=\"&#e602;\" class=\"icon-cancel-circle\" title=\"Incorrect\"></span>";
@@ -15,14 +16,14 @@ function startGame(){
 }
 
 
-// Display the item
+// Display the item content
 function displayItem() {
 	var item = document.getElementById("item");
 	item.innerHTML = currentItem.stem;
 }
 
 
-// Display next item
+// Display the next item
 function displayNextItem() {	
 	nextItem++;
 	currentItem = items[nextItem];
@@ -85,6 +86,13 @@ function evaluateResponse(response) {
 		document.getElementById("card-item").style.display = "none";
 		document.getElementById("card-fix").style.display = "block";
 
+		document.getElementById("userFixResponse").onkeydown = function(event) {
+		if (event.keyCode == 13) {
+			event.preventDefault();
+   			evaluateFixResponse();
+   			}
+		}
+
 	} else {
 
 		document.getElementById("card-item").style.display = "none";
@@ -108,7 +116,6 @@ function evaluateFixResponse() {
 
 	if(userFixResponse == currentItem.correct) {
 		displayFeedbackCorrect();
-
 	} else {
 		displayFeedbackIncorrect();
 	}
@@ -127,10 +134,12 @@ function displayResults() {
 }
 
 
-// Reset game
+// Reset the game
 function resetGame() {
 	currentItem = items[0];
+
 	document.getElementById("report").style.display = "none";
 	document.getElementById("card-item").style.display = "block";
+
 	displayItem();
 }
