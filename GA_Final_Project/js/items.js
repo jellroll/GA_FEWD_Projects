@@ -8,7 +8,8 @@ var item0 = {
 	"hint" : "Fix the spelling.",
 	"feedbackCorrectMessage" : "Hooray! You are de<span class=\"highlight\">fin</span>itely correct!",
 	"feedbackIncorrectMessage" : "That's de<span class=\"highlight\">fin</span>itely a fixable problem.",
-	"feedbackImage" : "img/hint-fish.png"
+	"feedbackImage" : "img/hint-fish.png",
+	"issue" : "spelling"
 }
 
 var item1 = {
@@ -18,7 +19,8 @@ var item1 = {
 	"correct" : "Ironic",
 	"feedbackCorrectMessage" : "Yes. Something is <span class=\"highlight\">ironic</span> when it's <b>opposite</b> to what you would expect.",
 	"feedbackIncorrectMessage" : "<span class=\"highlight\">Ironic</span> doesn't just describe an unfortunate situtation. Something is <em>ironic</em> when it's <b>opposite</b> to what you would expect.",
-	"feedbackImage" : "img/hint-iron.png"
+	"feedbackImage" : "img/hint-iron.png",
+	"issue" : "misused word"
 }
 
 var item2 = {
@@ -27,7 +29,8 @@ var item2 = {
 	"fix" : false,
 	"feedbackCorrectMessage" : "Right on! Use the apostrophe in <span class=\"highlight\">it's</span> to shorten \"it is\" (e.g. It's raining.).",
 	"feedbackIncorrectMessage" : "Actually, we do use the apostrophe in <span class=\"highlight\">it's</span> to mean \"it is\" (e.g. It's raining.).",
-	"feedbackImage" : "img/hint-blank.png"
+	"feedbackImage" : "img/hint-blank.png",
+	"issue" : "apostrophes"
 }
 
 var item3 = {
@@ -36,18 +39,20 @@ var item3 = {
 	"fix" : false,
 	"correct" : "lose",
 	"feedbackCorrectMessage" : "Good eye. <span class=\"highlight\">Irregardless</span> is not a real word.",
-	"feedbackIncorrectMessage" : "<span class=\"highlight\">Irregardless</span> is not a real word! Use the word <em>regardless</em> instead.",
-	"feedbackImage" : "img/hint-rabbit.png"
+	"feedbackIncorrectMessage" : "<span class=\"highlight\">Irregardless</span> is not a real word. Use the word <em>regardless</em> instead.",
+	"feedbackImage" : "img/hint-rabbit.png",
+	"issue" : "wrong word"
 }
 
 var item4 = {
 	"stem" : "Harry <span class=\"highlight\">drunk</span> his glass of butterbeer in five minutes.",
 	"answer" : false,
 	"fix" : true,
-	"prompt" : "<em>drunk</em> or <em>drank</em>?",
+	"prompt" : "<span class=\"highlight\">drunk</span>",
 	"correct" : "drank",
-	"hint" : "What's the simple past of <span class=\"highlight\">drink</span>?",
+	"hint" : "What's the simple past of the word <em>drink</em>?",
 	"feedbackCorrectMessage" : "That's right. <em>Drank</em> is the simple past of <em>drink</em>.",
 	"feedbackIncorrectMessage" : "Close. <em>Drunk</em> is the past tense of <em>drink</em> when used with <em>have</em>.",
-	"feedbackImage" : "img/hint-blank.png"
+	"feedbackImage" : "img/hint-blank.png",
+	"issue" : "wrong word"
 }
