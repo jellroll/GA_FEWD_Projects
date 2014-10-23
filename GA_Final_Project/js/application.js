@@ -41,17 +41,15 @@ function displayNextItem() {
 	document.getElementById("card-item").style.display = "block";
 
 	if(nextItem === items.length) {
+		currentItem = items[0];
 		document.getElementById("card-item").style.display = "none";
-		document.getElementById("card-feedback").style.display = "none";
 		document.getElementById("report").style.display = "block";
+
 		displayResults();
+
 		} else {
 			displayItem();
 	}
-
-	console.log(currentItem);
-	console.log(items.indexOf(currentItem));
-
 }
 
 
@@ -93,7 +91,8 @@ function evaluateResponse(response) {
 		document.getElementById("card-item").style.display = "none";
 		document.getElementById("card-fix").style.display = "block";
 
-		document.getElementById("userFixResponse").onkeydown = function(event) {
+		// Invoke evaluateFixResponse with enter key on input
+		document.getElementById("user-fix-response").onkeydown = function(event) {
 		if (event.keyCode == 13) {
 			event.preventDefault();
    			evaluateFixResponse();
@@ -117,7 +116,7 @@ function evaluateResponse(response) {
 
 // Evaluate fix item response
 function evaluateFixResponse() {
-	var userFixResponse = document.getElementById("userFixResponse").value;
+	var userFixResponse = document.getElementById("user-fix-response").value;
 
 	document.getElementById("card-fix").style.display = "none";
 	document.getElementById("card-feedback").style.display = "block";
@@ -134,7 +133,6 @@ function evaluateFixResponse() {
 // Tally score
 function tallyScore() {
 	score = score + 20;
-	console.log("User total score is now: " + score);
 }
 
 
@@ -160,6 +158,7 @@ function displayResults() {
 // Reset the game
 function resetGame() {
 	currentItem = items[0];
+	nextItem = 0;
 	score = 0;
 
 	document.getElementById("report").style.display = "none";

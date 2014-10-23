@@ -44,13 +44,13 @@ var item3 = {
 }
 
 var item4 = {
-	"stem" : "Sam ordered a sandwich, chips and soda.",
-	"answer" : false,
+	"stem" : "Sam <span class=\"highlight\">drank</span> a whole can of soda.",
+	"answer" : true,
 	"fix" : true,
-	"prompt" : "Sam ordered a sandwich, chips and soda.",
-	"correct" : "Sam ordered a sandwich, chips, and soda.",
-	"hint" : "Is there a comma missing?",
-	"feedbackCorrectMessage" : "Oxford comma: correct.",
-	"feedbackIncorrectMessage" : "Oxford comma: incorrect.",
+	"prompt" : "Sam <span class=\"highlight\">drank</span> a whole can of soda.",
+	"correct" : "Sam drank a whole can of soda.",
+	"hint" : "Is the right word?",
+	"feedbackCorrectMessage" : " correct.",
+	"feedbackIncorrectMessage" : " incorrect.",
 	"feedbackImage" : "img/hint-fish.png"
 }
