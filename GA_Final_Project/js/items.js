@@ -16,8 +16,8 @@ var item1 = {
 	"answer" : false,
 	"fix" : false,
 	"correct" : "Ironic",
-	"feedbackCorrectMessage" : "Yes. Something is <span class=\"highlight\">ironic</span> when it's deliberately <b>opposite</b> to what you would expect.",
-	"feedbackIncorrectMessage" : "Something is <span class=\"highlight\">ironic</span> when it's deliberately <b>opposite</b> to what you would expect.",
+	"feedbackCorrectMessage" : "Yes. Something is <span class=\"highlight\">ironic</span> when it's <b>opposite</b> to what you would expect.",
+	"feedbackIncorrectMessage" : "<span class=\"highlight\">Ironic</span> doesn't just describe an unfortunate situtation. Something is <em>ironic</em> when it's <b>opposite</b> to what you would expect.",
 	"feedbackImage" : "img/hint-iron.png"
 }
 
@@ -25,32 +25,29 @@ var item2 = {
 	"stem" : "<span class=\"highlight\">It's</span> getting hot in here.",
 	"answer" : true,
 	"fix" : false,
-	"prompt" : "<span class=\"highlight\">It's</span> getting hot in here.",
-	"feedbackCorrectMessage" : "Use the apostrophe in <span class=\"highlight\">it's</span> to shorten \"it is\".",
-	"feedbackIncorrectMessage" : "Actually, use the apostrophe in <span class=\"highlight\">it's</span> to mean \"it is\".",
-	"feedbackImage" : "img/hint-fish.png"
+	"feedbackCorrectMessage" : "Right on! Use the apostrophe in <span class=\"highlight\">it's</span> to shorten \"it is\" (e.g. It's raining.).",
+	"feedbackIncorrectMessage" : "Actually, we do use the apostrophe in <span class=\"highlight\">it's</span> to mean \"it is\" (e.g. It's raining.).",
+	"feedbackImage" : "img/hint-blank.png"
 }
 
 var item3 = {
-	"stem" : "I don't want to <span class=\"highlight\">loose</span> my spare change.",
+	"stem" : "She dove into the water, <span class=\"highlight\">irregardless</span> of the cold temperature.",
 	"answer" : false,
-	"fix" : true,
-	"prompt" : "I don't want to <span class=\"highlight\">loose</span> my spare change.",
+	"fix" : false,
 	"correct" : "lose",
-	"hint" : "Enter the correct word.",
-	"feedbackCorrectMessage" : "Wrong word: correct.",
-	"feedbackIncorrectMessage" : "Wrong word: incorrect.",
-	"feedbackImage" : "img/hint-fish.png"
+	"feedbackCorrectMessage" : "Good eye. <span class=\"highlight\">Irregardless</span> is not a real word.",
+	"feedbackIncorrectMessage" : "<span class=\"highlight\">Irregardless</span> is not a real word! Use the word <em>regardless</em> instead.",
+	"feedbackImage" : "img/hint-rabbit.png"
 }
 
 var item4 = {
-	"stem" : "Sam <span class=\"highlight\">drank</span> a whole can of soda.",
-	"answer" : true,
+	"stem" : "Harry <span class=\"highlight\">drunk</span> his glass of butterbeer in five minutes.",
+	"answer" : false,
 	"fix" : true,
-	"prompt" : "Sam <span class=\"highlight\">drank</span> a whole can of soda.",
-	"correct" : "Sam drank a whole can of soda.",
-	"hint" : "Is the right word?",
-	"feedbackCorrectMessage" : " correct.",
-	"feedbackIncorrectMessage" : " incorrect.",
-	"feedbackImage" : "img/hint-fish.png"
+	"prompt" : "<em>drunk</em> or <em>drank</em>?",
+	"correct" : "drank",
+	"hint" : "What's the simple past of <span class=\"highlight\">drink</span>?",
+	"feedbackCorrectMessage" : "That's right. <em>Drank</em> is the simple past of <em>drink</em>.",
+	"feedbackIncorrectMessage" : "Close. <em>Drunk</em> is the past tense of <em>drink</em> when used with <em>have</em>.",
+	"feedbackImage" : "img/hint-blank.png"
 }
