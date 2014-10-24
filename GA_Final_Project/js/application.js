@@ -12,6 +12,7 @@ var resultRange2 = "<span aria-hidden=\"true\" data-icon=\"&#e607;\" class=\"ico
 var resultRange3 = "<span aria-hidden=\"true\" data-icon=\"&#e60a;\" class=\"icon-smiley\" alt=\"Level 3\"></span>";
 var resultRange4 = "<span aria-hidden=\"true\" data-icon=\"&#e609;\" class=\"icon-happy\" alt=\"Level 4\"></span>";
 
+var issues = [];
 
 
 //Start the game
@@ -76,6 +77,10 @@ function displayFeedbackIncorrect() {
 
 	var feedbackImage = document.getElementById("feedback-image");
 	feedbackImage.setAttribute('src', currentItem.feedbackImage);
+
+	// Push item issue into array
+	issues.push(currentItem.issue);
+	console.log("The issues are: " + issues);
 }
 
 
@@ -152,14 +157,32 @@ function displayResults() {
 	} else {
 		resultEvaluation.innerHTML = resultRange4;
 	}
+
+	displayIssues();
 }
 
+
+// Display issues with incorrect responses
+function displayIssues() {
+	var issueList = document.getElementById("issue-list");
+	var issueListTitle = document.getElementById("issue-list-title");
+
+	if(issues.length != 0) {
+		issueList.innerHTML = "You may want to review:";
+
+		for(var i = 0; i < issues.length; i++) {
+			issueList.innerHTML += ("<p>" + issues[i] + "</p>");
+		}
+	}	
+}
+	
 
 // Reset the game
 function resetGame() {
 	currentItem = items[0];
 	nextItem = 0;
 	score = 0;
+	issues = [];
 
 	document.getElementById("report").style.display = "none";
 	document.getElementById("card-item").style.display = "block";
