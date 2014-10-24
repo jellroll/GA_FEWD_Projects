@@ -20,7 +20,7 @@ var item1 = {
 	"feedbackCorrectMessage" : "Yes. Something is <span class=\"highlight\">ironic</span> when it's <b>opposite</b> to what you would expect.",
 	"feedbackIncorrectMessage" : "<span class=\"highlight\">Ironic</span> doesn't just describe an unfortunate situtation. Something is <em>ironic</em> when it's <b>opposite</b> to what you would expect.",
 	"feedbackImage" : "img/hint-iron.png",
-	"issue" : "<span class=\"review-issue\">Ironic</span><br /><a href=\"http://theoatmeal.com/comics/irony\" target=\"_blank\">The Three Most Common Uses of Irony</a>"
+	"issue" : "<span class=\"review-issue\">Ironic</span><br /><a href=\"http://theoatmeal.com/comics/irony\" target=\"_blank\">The Oatmeal: The Three Most Common Uses of Irony</a>"
 }
 
 var item2 = {
@@ -28,9 +28,9 @@ var item2 = {
 	"answer" : true,
 	"fix" : false,
 	"feedbackCorrectMessage" : "Right on! Use the apostrophe in <span class=\"highlight\">it's</span> to shorten \"it is\" (e.g. It's raining.).",
-	"feedbackIncorrectMessage" : "Actually, we do use the apostrophe in <span class=\"highlight\">it's</span> to mean \"it is\" (e.g. It's raining.).",
+	"feedbackIncorrectMessage" : "Actually, we do include the apostrophe in <span class=\"highlight\">it's</span> to mean \"it is\" (e.g. It's raining.).",
 	"feedbackImage" : "img/hint-blank.png",
-	"issue" : "<span class=\"review-issue\">Its vs. It's</span>"
+	"issue" : "<span class=\"review-issue\">Its vs. it's</span><br /><a href=\"http://grammarist.com/spelling/its-its/\" target=\"_blank\">Grammarist: Its vs it's</a>"
 }
 
 var item3 = {
@@ -52,7 +52,7 @@ var item4 = {
 	"correct" : "drank",
 	"hint" : "What's the simple past tense of the word <em>drink</em>?",
 	"feedbackCorrectMessage" : "That's right. <em>Drank</em> is the simple past of <em>drink</em>.",
-	"feedbackIncorrectMessage" : "<em>Drunk</em> is the past tense of <em>drink</em> when used with <em>have</em>.",
+	"feedbackIncorrectMessage" : "<em>Drunk</em> is the past tense of <em>drink</em> when used with the word <em>have</em>.",
 	"feedbackImage" : "img/hint-blank.png",
-	"issue" : "<span class=\"review-issue\">Drank vs. Drunk</span>"
+	"issue" : "<span class=\"review-issue\">Drank vs. drunk</span>"
 }
