@@ -9,7 +9,7 @@
 		<link href="http://fonts.googleapis.com/css?family=Bitter:700" rel="stylesheet" type="text/css">
 		<link href="css/main.css" rel="stylesheet" type="text/css" />
 		<link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css" />
-		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>utter butter game</title>
 	</head>
 
@@ -17,7 +17,7 @@
 	<h1>utter butter</h1>
 
 	<!-- Introduction -->
-	<div id="intro">
+	<div id="intro" class="card">
 		<h3>How to play:</h3>
 		<ol>
 			<li>Read the word or sentence.</li>
@@ -32,20 +32,20 @@
 	</div>
 
 	<!-- Item View -->
-	<div id="card-item">
-		<div id="card-content">
+	<div id="card-item" class="card">
+		<div class="card-content">
 			<p id="item"></p>
 		</div>
 
-		<div id="controls-item">
+		<div id="controls-item" class="controls">
 			<span onclick="evaluateResponse(false);" aria-hidden="true" data-icon="&#e608;" class="icon-heart-broken wobble-top" alt="Mistake"></span>
 			<span onclick="evaluateResponse(true);" aria-hidden="true" data-icon="&#e600;" class="icon-heart pulse" alt="No mistake"></span>
 		</div>
 	</div>
 
 	<!-- Fix Item View -->
-	<div id="card-fix">
-		<div id="card-content">
+	<div id="card-fix" class="card">
+		<div class="card-content">
 			<p id="prompt"></p>
 			<form id="fixResponseText" autocomplete="off">
 				<input id="user-fix-response" type="text" spellcheck="false" autofocus />
@@ -53,27 +53,27 @@
 			<p id="hint"></p>
 		</div>
 
-		<div id="controls-feedback">
+		<div id="controls-feedback" class="controls">
 			<span onclick="evaluateFixResponse();" aria-hidden="true" data-icon="&#e605;" class="icon-arrow-right wobble-horizontal" alt="Next"></span>
 		</div>
 	</div>
 
 	<!-- Feedback View -->
-	<div id="card-feedback">
+	<div id="card-feedback" class="card">
 		<div id="feedback-evaluation"></div>
 
-		<div id="card-content">
+		<div class="card-content">
 			<p id="feedback-message"></p>
 			<img id="feedback-image" />
 		</div>
 
-		<div id="controls-feedback">
+		<div id="controls-feedback" class="controls">
 			<span onclick="displayNextItem();" aria-hidden="true" data-icon="&#e605;" class="icon-arrow-right wobble-horizontal" alt="Next"></span>
 		</div>
 	</div>
 
 	<!-- Results View -->
-	<div id="report">
+	<div id="results">
 		<div id="result-evaluation"></div>
 		<div id="score"></div>
 		
@@ -86,7 +86,7 @@
 	</div>
 
 	<footer> 
-		fun crafted by &#169; <a href="http://www.5deadly.com" target="_blank">5deadly</a>
+		crafted by &#169; <a href="http://www.5deadly.com" target="_blank">5deadly</a>
 	</footer>
 </body>
 </html>

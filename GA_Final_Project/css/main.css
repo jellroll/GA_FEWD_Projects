@@ -20,25 +20,26 @@ input {
 	padding: 10px;
 	border: 1px solid rgb(201,201,201);
 	font-size: 1em;
-	font-weight: normal;
 }
 
 button {
-	width: 140px;
-	height: 40px;
+	height: 36px;
 	display: block;
-	margin: 10px auto 0 auto;
-	background: rgb(146,180,76);
+	margin: 0 auto 0 auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	background: rgb(245,176,43);
 	cursor: pointer;
 	border: none;
-	border-radius: 2px;
-	font-size: 22px;
+	border-radius: 5px;
+	font-size: 1.1em;
 	color: rgb(255,255,255);
-	font-variant: small-caps;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
-ol {
-	margin-bottom: 30px;
+button:hover {
+	background: rgb(242,158,13);
 }
 
 a {
@@ -46,8 +47,8 @@ a {
 	color: rgb(43,126,173);
 }
 
-a:hover {
-	color: rgb(18,70,100);
+ol {
+	margin-bottom: 30px;
 }
 
 footer {
@@ -55,7 +56,6 @@ footer {
 	position: fixed;
 	bottom: 4px;
 	text-align: center;
-	font-size: 1em;
 	color: rgb(255,255,255);
 }
 
@@ -64,13 +64,14 @@ footer a {
 	color: rgb(255,255,255);
 }
 
+footer a:hover {
+	background: rgb(20,118,165);
+	border-radius: 2px;
+}
+
 #intro {
-	max-width: 450px;
-	min-height: 300px;
-	margin: 0 auto;
-	border-radius: 8px;
-	background: rgb(255,255,255);
-	padding: 2px 0 0 14px;
+	padding: 2px 14px 0 14px;
+	font-size: 1.1em;
 }
 
 #intro img {
@@ -81,61 +82,27 @@ footer a {
 }
 
 #card-item {
-	max-width: 450px;
-	margin: 0 auto;
-	border-radius: 8px;
-	background: rgb(255,255,255);
 	display: none;
 }
 
 #card-fix {
-	max-width: 450px;
-	margin: 0 auto;
-	border-radius: 8px;
-	background: rgb(255,255,255);
 	display: none;
 }
 
 #card-feedback {
-	max-width: 450px;
-	margin: 0 auto;
-	border-radius: 8px;
-	background: rgb(255,255,255);
 	display: none;
 }
 
-#card-content {
-	min-height: 200px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	font-size: 1.6em;
-	padding-left: 24px;
-	padding-right: 24px;
-}
-
-#card-content p {
-	display: inline-block;
-}
-
 #controls-item {
-	width: 225px;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	bottom: 20px;
+	margin: 20px auto 0 auto;
+	text-align: center;
 }
 
 #controls-item .icon-heart {
-	margin-left: 100px;
+	margin-left: 30%;
 }
 
 #controls-feedback {
-	width: 100%;
-	position: relative;
-	display: block;
-	bottom: 20px;
-	padding-right: 10px;
 	text-align: right;
 }
 
@@ -146,30 +113,25 @@ footer a {
 	text-align: center;
 }
 
-#prompt {
-	width: 100%;
-	font-size: 1.2em;
-	margin-top: 20px;
-	margin-bottom: 10px;
-	text-align: center;
-}
-
-#hint {
-	width: 100%;
-	display: block;
-	margin-bottom: 20px;
-	font-family: courier, serif;
-	font-size: .9em;
-	text-align: center;
-}
-
 #feedback-image {
 	max-width: 40%;
 	margin-left: 30%;
 	margin-right: 30%;
 }
 
-#report {
+#prompt {
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#hint {
+	text-align: center;
+	font-family: courier, serif;
+	font-size: .9em;
+}
+
+#results {
 	max-width: 450px;
 	min-height: 280px;
 	margin: 0 auto;
@@ -201,6 +163,29 @@ footer a {
 	margin-left: 10px;
 	margin-bottom: 10px;
 	padding: 2px;
+}
+
+.card {
+	max-width: 450px;
+	min-height: 290px;
+	margin: 0 auto;
+	padding-left: 24px;
+	padding-right: 24px;
+	border-radius: 8px;
+	background: rgb(255,255,255);
+	font-size: 1.6em;
+}
+
+.card-content {
+	min-height: 200px;
+	padding-top: 2px;
+}
+
+.controls {
+	width: 100%;
+	position: relative;
+	display: block;
+	bottom: 10px;
 }
 
 .highlight {
@@ -420,9 +405,3 @@ footer a {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
-
-/*@media (max-width: 700px) {
-	body {
-		background-color: red;
-	}
-}*/

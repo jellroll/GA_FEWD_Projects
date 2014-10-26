@@ -7,7 +7,7 @@ var item0 = {
 	"correct" : "definitely",
 	"hint" : "Fix the spelling.",
 	"feedbackCorrectMessage" : "Hooray! You are de<span class=\"highlight\">fin</span>itely correct!",
-	"feedbackIncorrectMessage" : "That's de<span class=\"highlight\">fin</span>itely a fixable problem.",
+	"feedbackIncorrectMessage" : "That's defin<span class=\"highlight\">i</span>tely a fixable problem.",
 	"feedbackImage" : "img/hint-fish.png",
 	"issue" : "<span class=\"review-issue\">Definitely</span><br /><a href=\"http://www.d-e-f-i-n-i-t-e-l-y.com/\" target=\"_blank\">D-E-F-I-N-I-T-E-L-Y</a>"
 }
@@ -27,8 +27,8 @@ var item2 = {
 	"stem" : "<span class=\"highlight\">It's</span> getting hot in here.",
 	"answer" : true,
 	"fix" : false,
-	"feedbackCorrectMessage" : "Right on! Use the apostrophe in <span class=\"highlight\">it's</span> to shorten \"it is\" (e.g. It's raining.).",
-	"feedbackIncorrectMessage" : "Actually, we do include the apostrophe in <span class=\"highlight\">it's</span> to mean \"it is\" (e.g. It's raining.).",
+	"feedbackCorrectMessage" : "Right on! Use the apostrophe in <span class=\"highlight\">it's</span> to shorten \"it is\" (e.g. It's raining).",
+	"feedbackIncorrectMessage" : "Actually, we do include the apostrophe in <span class=\"highlight\">it's</span> to mean \"it is\" (e.g. It's raining).",
 	"feedbackImage" : "img/hint-blank.png",
 	"issue" : "<span class=\"review-issue\">Its vs. it's</span><br /><a href=\"http://grammarist.com/spelling/its-its/\" target=\"_blank\">Grammarist: Its vs it's</a>"
 }
@@ -48,10 +48,10 @@ var item4 = {
 	"stem" : "Harry <span class=\"highlight\">drunk</span> his glass of butterbeer in five minutes.",
 	"answer" : false,
 	"fix" : true,
-	"prompt" : "<span class=\"highlight\">drunk</span>",
+	"prompt" : "drunk",
 	"correct" : "drank",
 	"hint" : "What's the simple past tense of the word <em>drink</em>?",
-	"feedbackCorrectMessage" : "That's right. <em>Drank</em> is the simple past of <em>drink</em>.",
+	"feedbackCorrectMessage" : "That's right. <em>Drank</em> is the simple past of the word <em>drink</em>.",
 	"feedbackIncorrectMessage" : "<em>Drunk</em> is the past tense of <em>drink</em> when used with the word <em>have</em>.",
 	"feedbackImage" : "img/hint-blank.png",
 	"issue" : "<span class=\"review-issue\">Drank vs. drunk</span>"

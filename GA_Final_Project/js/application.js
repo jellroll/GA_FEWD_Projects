@@ -15,6 +15,10 @@ var resultRange4 = "<span aria-hidden=\"true\" data-icon=\"&#e609;\" class=\"ico
 var issues = [];
 
 
+// $('#intro button').click(function(){
+// 	startGame();
+// })
+
 //Start the game
 function startGame(){
 	document.getElementById("intro").style.display = "none";
@@ -41,10 +45,10 @@ function displayNextItem() {
 	document.getElementById("card-feedback").style.display = "none";
 	document.getElementById("card-item").style.display = "block";
 
-	if(nextItem === items.length) {
+	if (nextItem === items.length) {
 		currentItem = items[0];
 		document.getElementById("card-item").style.display = "none";
-		document.getElementById("report").style.display = "block";
+		document.getElementById("results").style.display = "block";
 
 		displayResults();
 
@@ -80,7 +84,6 @@ function displayFeedbackIncorrect() {
 
 	// Push item issue into array
 	issues.push(currentItem.issue);
-	console.log("The issues are: " + issues);
 }
 
 
@@ -184,7 +187,7 @@ function resetGame() {
 	score = 0;
 	issues = [];
 
-	document.getElementById("report").style.display = "none";
+	document.getElementById("results").style.display = "none";
 	document.getElementById("card-item").style.display = "block";
 
 	displayItem();
