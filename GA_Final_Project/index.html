@@ -28,7 +28,7 @@
 			<br />
 			No mistake &#8674; <img src="img/intro-heart.png" alt="No mistake" /></li>
 		</ol>
-		<button onclick="startGame();">start</button>
+		<button id="start-game">start</button>
 	</div>
 
 	<!-- Item View -->
@@ -38,8 +38,8 @@
 		</div>
 
 		<div id="controls-item" class="controls">
-			<span onclick="evaluateResponse(false);" aria-hidden="true" data-icon="&#e608;" class="icon-heart-broken wobble-top" alt="Mistake"></span>
-			<span onclick="evaluateResponse(true);" aria-hidden="true" data-icon="&#e600;" class="icon-heart pulse" alt="No mistake"></span>
+			<span id="evaluate-response-false" class="icon-heart-broken wobble-top" aria-hidden="true" data-icon="&#e608;" alt="Mistake"></span>
+			<span id="evaluate-response-true" alt="No mistake" aria-hidden="true" data-icon="&#e600;" class="icon-heart pulse"></span>
 		</div>
 	</div>
 
@@ -54,7 +54,7 @@
 		</div>
 
 		<div id="controls-feedback" class="controls">
-			<span onclick="evaluateFixResponse();" aria-hidden="true" data-icon="&#e605;" class="icon-arrow-right wobble-horizontal" alt="Next"></span>
+			<span id="evaluate-fix-response" class="icon-arrow-right wobble-horizontal" aria-hidden="true" data-icon="&#e605;" alt="Next"></span>
 		</div>
 	</div>
 
@@ -68,7 +68,7 @@
 		</div>
 
 		<div id="controls-feedback" class="controls">
-			<span onclick="displayNextItem();" aria-hidden="true" data-icon="&#e605;" class="icon-arrow-right wobble-horizontal" alt="Next"></span>
+			<span id="display-next-item" class="icon-arrow-right wobble-horizontal" aria-hidden="true" data-icon="&#e605;" alt="Next"></span>
 		</div>
 	</div>
 
@@ -78,7 +78,7 @@
 			<div id="result-evaluation"></div>
 			<div id="score"></div>
 			
-			<button onclick="resetGame()">play again</button>
+			<button id="reset-game">play again</button>
 		</div>
 
 		<div id="issues-container">

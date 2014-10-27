@@ -15,11 +15,35 @@ var resultRange4 = "<span aria-hidden=\"true\" data-icon=\"&#e609;\" class=\"ico
 var issues = [];
 
 
-/*$("#intro button").click(function(){
-	startGame();
-})*/
+// Triggers for major functions
+$(document).ready(function() {
+	$("#start-game").click(function() {
+		startGame();
+	});
 
-//Start the game
+	$("#evaluate-response-false").click(function() {
+		evaluateResponse(false);
+	});
+
+	$("#evaluate-response-true").click(function() {
+		evaluateResponse(true);
+	});
+
+	$("#evaluate-fix-response").click(function() {
+		evaluateFixResponse();
+	});
+
+	$("#display-next-item").click(function() {
+		displayNextItem();
+	});
+
+	$("#reset-game").click(function() {
+		resetGame();
+	});
+});
+
+
+// Start the game
 function startGame() {
 	document.getElementById("intro").style.display = "none";
 	document.getElementById("card-item").style.display = "block";
