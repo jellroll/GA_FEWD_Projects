@@ -150,7 +150,6 @@ function evaluateFixResponse() {
 // Tally score
 function tallyScore() {
 	score = score + 20;
-	console.log("The score is now: " + score);
 }
 
 
