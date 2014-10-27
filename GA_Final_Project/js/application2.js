@@ -3,7 +3,6 @@ var items = [item0, item1, item2, item3, item4];
 var currentItem = items[0];
 var nextItem = 0;
 var score = 0;
-var issues = [];
 
 var feedbackCorrect = "<span aria-hidden=\"true\" data-icon=\"&#e603;\" class=\"icon-checkmark-circle\" title=\"Correct\"></span>";
 var feedbackIncorrect = "<span aria-hidden=\"true\" data-icon=\"&#e602;\" class=\"icon-cancel-circle\" title=\"Incorrect\"></span>";
@@ -12,6 +11,8 @@ var resultRange1 = "<span aria-hidden=\"true\" data-icon=\"&#e601;\" class=\"ico
 var resultRange2 = "<span aria-hidden=\"true\" data-icon=\"&#e607;\" class=\"icon-neutral\" alt=\"Level 2\"></span>";
 var resultRange3 = "<span aria-hidden=\"true\" data-icon=\"&#e60a;\" class=\"icon-smiley\" alt=\"Level 3\"></span>";
 var resultRange4 = "<span aria-hidden=\"true\" data-icon=\"&#e609;\" class=\"icon-happy\" alt=\"Level 4\"></span>";
+
+var issues = [];
 
 
 // Trigger game methods
@@ -44,15 +45,17 @@ $(document).ready(function() {
 
 // Start the game
 function startGame() {
-	$("#intro").hide();
-	$("#card-item").show();
+
+	document.getElementById("intro").style.display = "none";
+	document.getElementById("card-item").style.display = "block";
 	displayItem();
 }
 
 
 // Display the item content
 function displayItem() {
-	$("#item").html(currentItem.stem);
+	var item = document.getElementById("item");
+	item.innerHTML = currentItem.stem;
 }
 
 
@@ -62,16 +65,16 @@ function displayNextItem() {
 	currentItem = items[nextItem];
 	
 	// Clear the form input field
-	$("#fix-response-text").trigger("reset");
+	document.getElementById("fixResponseText").reset();
 
-	$("#card-feedback").hide();
-	$("#card-item").show();
+	document.getElementById("card-feedback").style.display = "none";
+	document.getElementById("card-item").style.display = "block";
 
-	if(nextItem === items.length) {
+	if (nextItem === items.length) {
 		currentItem = items[0];
+		document.getElementById("card-item").style.display = "none";
+		document.getElementById("results").style.display = "block";
 
-		$("#card-item").hide();
-		$("#results").show();
 		displayResults();
 
 		} else {
@@ -82,17 +85,27 @@ function displayNextItem() {
 
 // Display feedback for correct response
 function displayFeedbackCorrect() {
-	$("#feedback-evaluation").html(feedbackCorrect);
-	$("#feedback-message").html(currentItem.feedbackCorrectMessage);
-	$("#feedback-image").attr("src",currentItem.feedbackImage);
+	var feedbackEvaluation = document.getElementById("feedback-evaluation");
+	feedbackEvaluation.innerHTML = feedbackCorrect;
+
+	var feedback = document.getElementById("feedback-message");
+	feedback.innerHTML = currentItem.feedbackCorrectMessage;
+
+	var feedbackImage = document.getElementById("feedback-image");
+	feedbackImage.setAttribute('src', currentItem.feedbackImage);
 }
 
 
 // Display feedback for incorrect response
 function displayFeedbackIncorrect() {
-	$("#feedback-evaluation").html(feedbackIncorrect);
-	$("#feedback-message").html(currentItem.feedbackIncorrectMessage);
-	$("#feedback-image").attr("src",currentItem.feedbackImage);
+	var feedbackEvaluation = document.getElementById("feedback-evaluation");
+	feedbackEvaluation.innerHTML = feedbackIncorrect;
+
+	var feedback = document.getElementById("feedback-message");
+	feedback.innerHTML = currentItem.feedbackIncorrectMessage;
+
+	var feedbackImage = document.getElementById("feedback-image");
+	feedbackImage.setAttribute('src', currentItem.feedbackImage);
 
 	// Push item issue into array
 	issues.push(currentItem.issue);
@@ -102,11 +115,14 @@ function displayFeedbackIncorrect() {
 // Evaluate no mistake / yes mistake response
 function evaluateResponse(response) {
 	if((currentItem.fix == true) && (response == false) && (currentItem.answer == false)) {
-		
-		$("#prompt").html(currentItem.prompt);
-		$("#hint").html(currentItem.hint);
-		$("#card-item").hide();
-		$("#card-fix").show();
+		var prompt = document.getElementById("prompt");
+		prompt.innerHTML = currentItem.prompt;
+
+		var hint = document.getElementById("hint");
+		hint.innerHTML = currentItem.hint;
+
+		document.getElementById("card-item").style.display = "none";
+		document.getElementById("card-fix").style.display = "block";
 
 		// Invoke evaluateFixResponse with enter key on input
 		document.getElementById("user-fix-response").onkeydown = function(event) {
@@ -118,8 +134,8 @@ function evaluateResponse(response) {
 
 	} else {
 
-		$("#card-item").hide();
-		$("#card-feedback").show();
+		document.getElementById("card-item").style.display = "none";
+		document.getElementById("card-feedback").style.display = "block";
 
 		if(response == currentItem.answer) {
 			displayFeedbackCorrect();
@@ -133,10 +149,10 @@ function evaluateResponse(response) {
 
 // Evaluate fix item response
 function evaluateFixResponse() {
-	var userFixResponse = $("#user-fix-response").val();
+	var userFixResponse = document.getElementById("user-fix-response").value;
 
-	$("#card-fix").hide();
-	$("#card-feedback").show();
+	document.getElementById("card-fix").style.display = "none";
+	document.getElementById("card-feedback").style.display = "block";
 
 	if(userFixResponse == currentItem.correct) {
 		displayFeedbackCorrect();
@@ -150,23 +166,24 @@ function evaluateFixResponse() {
 // Tally score
 function tallyScore() {
 	score = score + 20;
-	console.log("The score is now: " + score);
 }
 
 
 // Display results
 function displayResults() {
-	$("#score").html(score);
+	document.getElementById("score").innerHTML = score;
 
 	// Display score range icon
+	var resultEvaluation = document.getElementById("result-evaluation");
+
 	if(score < 49) {
-		$("#result-evaluation").html(resultRange1);
+		resultEvaluation.innerHTML = resultRange1;
 	} else if(score <= 69) {
-		$("#result-evaluation").html(resultRange2);
+		resultEvaluation.innerHTML = resultRange2;
 	} else if(score <= 89) {
-		$("#result-evaluation").html(resultRange3);
+		resultEvaluation.innerHTML = resultRange3;
 	} else {
-		$("#result-evaluation").html(resultRange4);
+		resultEvaluation.innerHTML = resultRange4;
 	}
 
 	displayIssues();
@@ -178,7 +195,7 @@ function displayIssues() {
 	var issueList = document.getElementById("issue-list");
 	
 	if(issues.length != 0) {
-		$("#issue-list").show();
+		document.getElementById("issue-list").style.display = "block";
 		issueList.innerHTML = "You had a bit of trouble with:";
 
 		for(var i = 0; i < issues.length; i++) {
@@ -195,7 +212,8 @@ function resetGame() {
 	score = 0;
 	issues = [];
 
-	$("#results").hide();
-	$("#card-item").show();
+	document.getElementById("results").style.display = "none";
+	document.getElementById("card-item").style.display = "block";
+
 	displayItem();
 }
