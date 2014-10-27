@@ -41,7 +41,7 @@ var item3 = {
 	"feedbackCorrectMessage" : "Good eye. <span class=\"highlight\">Irregardless</span> is not a real word.",
 	"feedbackIncorrectMessage" : "<span class=\"highlight\">Irregardless</span> is not a real word. Use the word <em>regardless</em> instead.",
 	"feedbackImage" : "img/hint-rabbit.png",
-	"issue" : "<span class=\"review-issue\">Irregardless</span>"
+	"issue" : "<span class=\"review-issue\">Irregardless</span><br /><a href=\"http://www.quickanddirtytips.com/education/grammar/irregardless-versus-regardless/\" target=\"_blank\">Grammar Girl: Irregardless Versus Regardless</a>"
 }
 
 var item4 = {
@@ -54,5 +54,5 @@ var item4 = {
 	"feedbackCorrectMessage" : "That's right. <em>Drank</em> is the simple past of the word <em>drink</em>.",
 	"feedbackIncorrectMessage" : "<em>Drunk</em> is the past tense of <em>drink</em> when used with the word <em>have</em>.",
 	"feedbackImage" : "img/hint-blank.png",
-	"issue" : "<span class=\"review-issue\">Drank vs. drunk</span>"
+	"issue" : "<span class=\"review-issue\">Drank vs. drunk</span><br /><a href=\"http://public.wsu.edu/~brians/errors/drank.html\" target=\"_blank\">Common Errors in English Usage</a>"
 }

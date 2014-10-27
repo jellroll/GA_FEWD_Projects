@@ -15,12 +15,12 @@ var resultRange4 = "<span aria-hidden=\"true\" data-icon=\"&#e609;\" class=\"ico
 var issues = [];
 
 
-// $('#intro button').click(function(){
-// 	startGame();
-// })
+/*$("#intro button").click(function(){
+	startGame();
+})*/
 
 //Start the game
-function startGame(){
+function startGame() {
 	document.getElementById("intro").style.display = "none";
 	document.getElementById("card-item").style.display = "block";
 	displayItem();
@@ -168,10 +168,10 @@ function displayResults() {
 // Display issues with incorrect responses
 function displayIssues() {
 	var issueList = document.getElementById("issue-list");
-	var issueListTitle = document.getElementById("issue-list-title");
-
+	
 	if(issues.length != 0) {
-		issueList.innerHTML = "You may want to review:";
+		document.getElementById("issue-list").style.display = "block";
+		issueList.innerHTML = "You had a bit of trouble with:";
 
 		for(var i = 0; i < issues.length; i++) {
 			issueList.innerHTML += ("<p>" + issues[i] + "</p>");
