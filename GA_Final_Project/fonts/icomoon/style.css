@@ -73,14 +73,14 @@
 .icon-cancel-circle:before {
 	content: "\e602";
 	font-size: 60px;
-	color: rgb(185,17,63);
+	color: rgb(75,75,75);
 	speak: none;
 }
 
 .icon-checkmark-circle:before {
 	content: "\e603";
 	font-size: 60px;
-	color: rgb(88,187,78);
+	color: rgb(75,75,75);
 	speak: none;
 }
 
